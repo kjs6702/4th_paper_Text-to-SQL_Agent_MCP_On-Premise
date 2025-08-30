@@ -59,107 +59,16 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 - MySQL (8.0)
 - PostgreSQL (15)
 
-## 설치 방법
-
-### Prerequisites
-```bash
-# Docker 설치 확인
-docker --version
-
-# Python 3.12+ 설치 확인
-python --version
-
-# NVIDIA GPU 드라이버 확인 (선택사항)
-nvidia-smi
-```
-
-### 1. 프로젝트 클론
-```bash
-git clone https://github.com/[your-username]/mcp-text-to-sql-agent.git
-cd mcp-text-to-sql-agent
-```
-
-### 2. Docker 컨테이너 빌드
-```bash
-# 에이전트 컨테이너 빌드
-docker build -t mcp-agent ./agent
-
-# 데이터베이스 컨테이너 빌드
-docker build -t mcp-database ./database
-```
-
-### 3. 환경 설정
-```bash
-# 환경 변수 설정
-cp .env.example .env
-# .env 파일을 편집하여 데이터베이스 연결 정보 설정
-```
-
-### 4. 시스템 실행
-```bash
-# Docker Compose로 전체 시스템 실행
-docker-compose up -d
-```
-
-## 사용 방법
-
-### 웹 인터페이스 접속
-```
-http://localhost:8501
-```
-
-### 자연어 질의 예시
-
-#### 테이블 목록 조회
-```
-"현재 데이터베이스에 있는 모든 테이블을 보여줘"
-```
-
-#### 데이터 조회
-```
-"employees 테이블에서 급여가 5000 이상인 직원들을 찾아줘"
-```
-
-#### 데이터 추가
-```
-"products 테이블에 새로운 제품을 추가해줘. 이름은 'Laptop', 가격은 1500000"
-```
-
-#### 복잡한 질의
-```
-"각 부서별 평균 급여를 계산하고, 평균 급여가 가장 높은 상위 3개 부서를 보여줘"
-```
-
-## 📁 프로젝트 구조
+## 프로젝트 구조
 
 ```
-mcp-text-to-sql-agent/
-├── agent/                    # MCP Client (LangGraph Agent)
-│   ├── src/
-│   │   ├── agent.py         # 메인 에이전트 로직
-│   │   ├── tools.py         # MCP 도구 인터페이스
-│   │   └── prompts.py       # LLM 프롬프트 템플릿
-│   ├── Dockerfile
-│   └── requirements.txt
-├── server/                   # MCP Server
-│   ├── src/
-│   │   ├── server.py        # MCP 서버 구현
-│   │   ├── tools/           # 9개의 표준화된 도구
-│   │   └── db_connectors/   # 데이터베이스 커넥터
-│   ├── Dockerfile
-│   └── requirements.txt
-├── host/                     # Streamlit UI (MCP Host)
-│   ├── app.py               # Streamlit 애플리케이션
-│   ├── pages/               # UI 페이지
-│   └── requirements.txt
-├── database/                 # 데이터베이스 설정
-│   ├── init_scripts/        # DB 초기화 스크립트
-│   └── docker-compose.yml
-├── tests/                    # 테스트 코드
-├── docs/                     # 문서
-├── .env.example             # 환경 변수 예시
-├── docker-compose.yml       # Docker Compose 설정
-└── README.md
+├── host.py            # MCP Host
+├── client.py          # MCP Client
+├── mcp_server_db.py   # MCP Server
+├── connections.json   # DB 연결 정보
+├── mcp_config.json    # MCP Server 목록(연결용)
+├── pyproject.toml     # 의존성 목록
+                  
 
 ```
 
