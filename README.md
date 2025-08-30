@@ -76,12 +76,13 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 ## 프로젝트 구조
 
 ```
+.
 ├── host.py            # MCP Host
 ├── client.py          # MCP Client
 ├── mcp_server_db.py   # MCP Server
 ├── connections.json   # DB 연결 정보
 ├── mcp_config.json    # MCP Server 목록(연결용)
-├── pyproject.toml     # 의존성 목록
+└── pyproject.toml     # 의존성 목록
 ```
 
 ### 실험 결과
