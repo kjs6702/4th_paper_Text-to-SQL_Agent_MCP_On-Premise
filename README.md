@@ -11,9 +11,17 @@
 
 ## MCP(Model Context Protocol)
 
+2024년 Anthropic에서 제안한 개방형 프로토콜로, LLM과 외부 도구를 표준화된 방식으로 연결합니다.
+
+- **Host-Client-Server 3계층 구조**
+- **표준화된 방식으로 확장성과 재사용성 확보**
+- **JSON-RPC 기반 통신**
+
 ![](./img/mcp.svg)
 
 ## LLM-based 에이전트
+
+Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해결
 
 ![](./img/llm-based_agent.png)
 
