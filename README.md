@@ -105,7 +105,7 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 
 ## 향후 계획
 
-- [ ] A2A(Agent-to-Agent) 아키텍처 기반 멀티 에이전트 구현으로 병렬 처리
+A2A(Agent-to-Agent) 아키텍처 기반 멀티 에이전트 구현으로 병렬 처리
 
 ## 라이선스
 
