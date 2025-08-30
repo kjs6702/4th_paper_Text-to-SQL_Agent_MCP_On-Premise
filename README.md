@@ -11,7 +11,7 @@
 
 ## 시스템 아키텍처
 
-!(./img/system_architecture.png)
+![](./img/system_architecture.png)
 
 
 ## 🛠️ 기술 스택
