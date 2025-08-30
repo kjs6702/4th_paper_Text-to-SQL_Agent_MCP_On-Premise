@@ -9,6 +9,14 @@
 - **확장성** - MCP 프로토콜 기반으로 총 4개의 데이터베이스 지원
 - **지능형 에이전트** - LangGraph 기반 ReAct 프레임워크로 복잡한 질의 처리
 
+## MCP(Model Context Protocol)
+
+![](./img/mcp.png)
+
+## LLM-based 에이전트
+
+![](./img/llm-based_agent.png)
+
 ## 시스템 아키텍처
 
 ![](./img/system_architecture.png)
@@ -18,7 +26,7 @@
 
 ### 핵심 기술
 - **LLM Model**: gpt-oss:20b (OpenAI 오픈소스 모델)
-- **Agent Framework**: LangGraph with ReAct pattern
+- **Agent Framework**: LangGraph with ReAct 
 - **Protocol**: MCP (Model Context Protocol)
 - **UI**: Streamlit
 - **Container**: Docker
