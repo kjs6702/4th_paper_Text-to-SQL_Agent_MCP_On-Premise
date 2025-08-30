@@ -40,15 +40,17 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 - **Container**: Docker
 
 ### 상세 스펙
-| 구분 | 항목 | 버전/내용 |
-|------|------|----------|
-| **Hardware** | GPU | NVIDIA V100 32GB |
-| **OS** | Operating System | Debian 12.0 Bookworm |
-| **Language** | Programming | Python 3.12 |
-| **MCP Host** | UI Framework | streamlit==1.44.1 |
-| **MCP Client** | LLM Integration | langchain-ollama==0.3.6<br>langgraph==0.3.21 |
-| **MCP Server** | Tool Server | mcp[cli]==1.6.0<br>langchain-mcp-adapters==0.0.7 |
-| **Container** | Virtualization | Docker 28.3.2 |
+| 구분 | 항목 | 내용 |
+|------|------|------|
+| **H/W** | GPU | NVIDIA V100 32GB |
+| **S/W** | OS | Debian 12.0 Bookworm |
+| **S/W** | Language | Python 3.12 |
+| **S/W**| LLM | gpt-oss:20b |
+| **S/W**  | MCP Host | streamlit==1.44.1 |
+| **S/W** | MCP Client | langchain-ollama==0.3.6<br>langgraph==0.3.21 |
+| **S/W** | MCP Server | mcp[cli]==1.6.0<br>langchain-mcp-adapters==0.0.7 |
+| **S/W** | Database | Oracle XE(21c),<br>Microsoft SQL Server(2022),<br>MySQL(8.0),<br>PostgreSQL(15) |
+| **S/W** | Container | Docker 28.3.2 |
 
 ## 지원 데이터베이스
 
