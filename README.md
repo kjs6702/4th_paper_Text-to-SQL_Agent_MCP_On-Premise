@@ -11,7 +11,7 @@
 
 ## MCP(Model Context Protocol)
 
-![](./img/mcp.png)
+![](./img/mcp.svg)
 
 ## LLM-based 에이전트
 
