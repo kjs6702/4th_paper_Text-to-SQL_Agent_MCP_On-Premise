@@ -30,7 +30,7 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 ![](./img/system_architecture.png)
 
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 ### 핵심 기술
 - **LLM Model**: gpt-oss:20b (OpenAI 오픈소스 모델)
@@ -50,14 +50,14 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 | **MCP Server** | Tool Server | mcp[cli]==1.6.0<br>langchain-mcp-adapters==0.0.7 |
 | **Container** | Virtualization | Docker 28.3.2 |
 
-## 📦 지원 데이터베이스
+## 지원 데이터베이스
 
 - Oracle XE (21c)
 - Microsoft SQL Server (2022)
 - MySQL (8.0)
 - PostgreSQL (15)
 
-## 🚀 설치 방법
+## 설치 방법
 
 ### Prerequisites
 ```bash
@@ -99,7 +99,7 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-## 💻 사용 방법
+## 사용 방법
 
 ### 웹 인터페이스 접속
 ```
