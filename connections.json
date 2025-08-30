@@ -1,0 +1,18 @@
+{
+  "university_db_oracle": {
+    "description": "학생 및 과목 정보가 담긴 Oracle-xe 데이터베이스입니다.",
+    "url": "oracle+oracledb://agent_user:1q2w3e4r!@10.1.5.240:1521/?service_name=XE"
+  },
+  "university_db_microsoft_sql_server": {
+    "description": "학생 및 과목 정보가 담긴 Microsoft SQL Server데이터베이스입니다.",
+    "url": "mssql+pymssql://agent_user:1q2w3e4r!@10.1.5.240:1433/university_db_microsoft_sql_server"
+  },
+  "university_db_mysql": {
+    "description": "학생 및 과목 정보가 담긴 MySQL 데이터베이스입니다.",
+    "url": "mysql+mysqlconnector://agent_user:1q2w3e4r!@10.1.5.240:3306/university_db_mysql"
+  },
+  "university_db_postgre": {
+    "description": "학생 및 과목 정보가 담긴 PostgreSQL 데이터베이스입니다.",
+    "url": "postgresql+psycopg2://agent_user:1q2w3e4r!@10.1.5.240:5432/university_db_postgre"
+  }
+}

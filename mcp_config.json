@@ -1,0 +1,9 @@
+{
+  "university_db_service": {
+    "command": "python",
+    "args": [
+      "./mcp_server_db.py"
+    ],
+    "transport": "stdio"
+  }
+}
