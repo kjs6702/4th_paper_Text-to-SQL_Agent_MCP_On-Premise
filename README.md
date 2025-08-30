@@ -1,41 +1,18 @@
-# 🚀 MCP 기반 범용 Text-to-SQL 에이전트
+# 온 프레미스(On-Premise) 환경에서의 MCP(Model Context Protocol)를 활용한 범용 Text-to-SQL 에이전트 설계 및 구현에 관한 연구
 
-## 📋 프로젝트 개요
 
-온프레미스 환경에서 **MCP(Model Context Protocol)**를 활용한 범용 Text-to-SQL 에이전트 시스템입니다. 자연어 질의를 SQL로 변환하여 다양한 데이터베이스와 안전하게 상호작용할 수 있는 솔루션을 제공합니다.
+본 연구는 온프레미스 환경에서 **MCP(Model Context Protocol)**를 활용한 범용 Text-to-SQL 에이전트 시스템입니다. 자연어 질의를 SQL로 변환하여 다양한 데이터베이스와 안전하게 상호작용할 수 있는 시스템입니다.
 
 ### 주요 특징
-- 🔒 **온프레미스 환경** - 민감한 데이터를 외부로 전송하지 않아 보안성 확보
-- 💰 **비용 효율성** - 상용 API 의존성을 제거하여 운영 비용 절감
-- 🔧 **확장성** - MCP 프로토콜 기반으로 다양한 데이터베이스 지원
-- 🤖 **지능형 에이전트** - LangGraph 기반 ReAct 프레임워크로 복잡한 질의 처리
+- **온프레미스 환경** - 민감한 데이터를 외부로 전송하지 않아 보안성 확보
+- **비용 효율성** - 상용 API 의존성을 제거하여 운영 비용 절감
+- **확장성** - MCP 프로토콜 기반으로 총 4개의 데이터베이스 지원
+- **지능형 에이전트** - LangGraph 기반 ReAct 프레임워크로 복잡한 질의 처리
 
-## 🏗️ 시스템 아키텍처
+## 시스템 아키텍처
 
-```
-┌─────────────────────────────────────────────┐
-│              Streamlit UI (MCP Host)         │
-└─────────────────┬───────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────┐
-│         LangGraph Agent (MCP Client)         │
-│            - gpt-oss:20b Model               │
-│            - ReAct Framework                 │
-└─────────────────┬───────────────────────────┘
-                  │
-┌─────────────────▼───────────────────────────┐
-│            MCP Server (9 Tools)              │
-│  - Database Connection Management            │
-│  - SQL Query Execution                       │
-│  - Result Processing                         │
-└─────────────────┬───────────────────────────┘
-                  │
-    ┌─────────────┴─────────────┐
-    │                           │
-┌───▼────┐  ┌──────┐  ┌────────┐  ┌──────────┐
-│ Oracle │  │MySQL │  │MS SQL  │  │PostgreSQL│
-└────────┘  └──────┘  └────────┘  └──────────┘
-```
+!(./img/system_architecture.pdf)
+
 
 ## 🛠️ 기술 스택
 
@@ -208,31 +185,15 @@ pytest
 8. **validate_query** - SQL 쿼리 유효성 검증
 9. **format_results** - 결과 포맷팅
 
-## 🤝 기여하기
-
-프로젝트 기여를 환영합니다! 
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ## 📝 라이선스
 
-이 프로젝트는 MIT 라이선스 하에 있습니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+이 프로젝트는 MIT 라이선스 하에 있습니다.
 
 ## 👥 저자
 
 - **김지섭** - 동서울대학교 컴퓨터 소프트웨어과
 - **김동우** - 동서울대학교 컴퓨터 소프트웨어과
 - **이재희** - 동서울대학교 컴퓨터 소프트웨어과 교수
-
-## 📧 연락처
-
-- wltjq6702@gmail.com
-- gimdongu19@gmail.com
-- lih7314@du.ac.kr
 
 ## 🔗 참고 문헌
 
@@ -242,19 +203,4 @@ pytest
 
 ## 🚧 향후 계획
 
-- [ ] A2A(Agent-to-Agent) 아키텍처 기반 멀티 에이전트 구현
-- [ ] 복잡한 작업의 병렬 처리 능력 향상
-- [ ] 추가 데이터베이스 지원 (MongoDB, Redis 등)
-- [ ] 자연어 이해 능력 고도화
-- [ ] 웹 기반 관리 콘솔 개발
-- [ ] 실시간 모니터링 대시보드 구현
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=[your-username]/mcp-text-to-sql-agent&type=Date)](https://star-history.com/#[your-username]/mcp-text-to-sql-agent&Date)
-
----
-
-<p align="center">
-  Made with ❤️ by Dong-Seoul University Computer Software Department
-</p>
+- [ ] A2A(Agent-to-Agent) 아키텍처 기반 멀티 에이전트 구현으로 병렬 처리 
