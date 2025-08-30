@@ -87,46 +87,40 @@ Thought-Action-Observation 순환 구조로 복잡한 질의 단계적으로 해
 ```
 
 ### 실험 결과
-- ✅ Oracle XE: 테이블 목록 조회 성공
-- ✅ MS SQL Server: 데이터 조회 성공
-- ✅ MySQL: 데이터 추가 성공
-- ✅ PostgreSQL: 데이터 검색 성공
 
-### 주요 성과
-- 4종류의 서로 다른 데이터베이스에서 안정적인 동작 확인
-- 자연어를 각 DB 종류에 맞는 SQL 방언으로 자동 변환
-- 온프레미스 환경에서 민감한 데이터 보호
+- Oracle XE: 테이블 목록 조회 성공
+![](./img/oracle.png)
 
-## 🔍 MCP Server Tools
+- MS SQL Server: 데이터 조회 성공
+![](./img/microsoft_sql_server.png)
 
-개발된 9개의 표준화된 도구:
+- MySQL: 데이터 삽입 성공
+![](./img/mysql.png)
 
-1. **get_db_info** - 데이터베이스 연결 정보 확인
-2. **list_tables** - 테이블 목록 조회
-3. **describe_table** - 테이블 스키마 조회
-4. **execute_select** - SELECT 쿼리 실행
-5. **execute_insert** - INSERT 쿼리 실행
-6. **execute_update** - UPDATE 쿼리 실행
-7. **execute_delete** - DELETE 쿼리 실행
-8. **validate_query** - SQL 쿼리 유효성 검증
-9. **format_results** - 결과 포맷팅
+- PostgreSQL: 데이터 검색 성공
+![](./img/postgresql.png)
 
-## 📝 라이선스
+이외에도 각각의 DB에 9개의 Tool 사용가능
+
+
+## 향후 계획
+
+- [ ] A2A(Agent-to-Agent) 아키텍처 기반 멀티 에이전트 구현으로 병렬 처리
+
+## 라이선스
 
 이 프로젝트는 MIT 라이선스 하에 있습니다.
 
-## 👥 저자
+## 저자
 
 - **김지섭** - 동서울대학교 컴퓨터 소프트웨어과
 - **김동우** - 동서울대학교 컴퓨터 소프트웨어과
 - **이재희** - 동서울대학교 컴퓨터 소프트웨어과 교수
 
-## 🔗 참고 문헌
+## 참고 문헌
 
 1. D. Gao, et al., "Text-to-SQL Empowered by Large Language Models: A Benchmark Evaluation," arXiv:2308.15363, 2023
 2. S. Yao, et al., "ReAct: Synergizing Reasoning and Acting in Language Models," arXiv:2210.03629, 2022
 3. Xinyi Hou et al., "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions", arXiv:2503.23278, 2024
 
-## 🚧 향후 계획
-
-- [ ] A2A(Agent-to-Agent) 아키텍처 기반 멀티 에이전트 구현으로 병렬 처리 
+ 
